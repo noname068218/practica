@@ -1,183 +1,185 @@
-.registration-backdrop {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(79, 46, 232, 1);
-  z-index: 101;
-}
-
-.registration-modal {
+.form-box {
+  background-color: #f6f6f6;
+  border: 2px solid #111;
+  border-radius: 18px;
+  width: calc(100% - 20px);
+  max-width: 579px;
+  padding: 80px 40px 40px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: calc(100% - 20px);
-  max-width: 579px;
-  transform: translate(calc(-50% - 10px), -50%) scale(1);
-  padding: 80px 40px 40px;
-  border: 2px solid darkblue;
-  background-color: #f6f6f6;
-  border-radius: 18px;
 }
-.registration-close-icon {
-  pointer-events: none;
+
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px 24px;
+  gap: 16px;
+  text-align: center;
 }
 
 .registration-close-btn {
-  position: absolute;
-  top: 24px;
-  right: 24px;
+  cursor: pointer;
+  stroke: #111;
+  background: 0 0;
+  justify-content: center;
+  align-items: center;
   width: 14px;
   height: 14px;
   margin-left: auto;
+  transition: stroke 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  cursor: pointer;
-  stroke: darkblue;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.registration-modal-field + .registration-modal-field {
-  margin-top: 28px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
 }
 
-.registration-modal-field-wrapper {
-  position: relative;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-}
-.registration-modal-input {
+.input-register {
+  color: #111;
+  background-color: #0000;
+  border: 2px solid #111;
+  border-radius: 40px;
+  outline: none;
   width: 100%;
   height: 64px;
   padding: 18px 32px;
-  border: 2px solid #111;
-  border-radius: 40px;
-  color: #111;
   font-size: 18px;
-  outline: none;
-  background-color: transparent;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.signup-btn {
-  border: none;
-  text-align: center;
-  text-transform: uppercase;
-  color: #f3f3f3;
-  padding: 20px;
-  width: 100%;
-  margin-top: 40px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 24px;
-  background-color: #111;
-  letter-spacing: -1px;
-  border-radius: 40px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.registration-inner {
-  margin-top: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: space-around;
-}
-.registration-link {
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 24px;
-  color: rgba(17, 17, 17, 0.5);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.registration-link + .registration-link {
-  margin-left: 20px;
-}
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .registration-modal {
-    height: 384px;
-    padding: 40px 20px;
-  }
-  .registration-close-btn {
-    top: 14px;
-    right: 14px;
-    font-size: 16px;
-  }
-  .registration-modal-input {
-    height: 50px;
-  }
 
-  .registration-modal-field + .registration-modal-field {
-    margin-top: 24px;
-  }
-  .signup-btn {
-    padding: 12px;
-    font-size: 16px;
-    height: 50px;
-    line-height: 18px;
-    margin-top: 24px;
-  }
-
-  .registration-modal-icon {
-    width: 18px;
-    height: 18px;
-  }
-
-  .registration-modal-input::placeholder {
-    font-size: 16px;
-    line-height: 18px;
-  }
-
-  .registration-inner {
-    margin-top: 14px;
-  }
-
-  .registration-link {
-    font-size: 14px;
-  }
+.register-wraper {
+  margin-top: 28px;
 }
-.sign-up-btn {
-  color: #fff;
-  background: #4f2ee8;
-  border-radius: 36px;
-  justify-content: space-between;
-  align-items: center;
-  width: 184px;
-  height: 45px;
-  padding: 0 14px;
-  font-weight: 700;
-  display: flex;
-  position: relative;
-}
-.sign-out-btn {
-  color: #4f2ee8;
-  background: #fff;
-  border: 1px solid #000;
-  border-radius: 18px;
-  justify-content: space-between;
-  align-items: center;
-  width: 184px;
-  height: 45px;
-  padding: 0 14px;
-  font-weight: 700;
-  display: flex;
+
+.icon-email {
+  stroke: #111;
+  transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   position: absolute;
+  top: 50%;
+  right: 32px;
+  transform: translateY(-50%);
+  display: none;
 }
-.visually-hidden {
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  border: 0;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  position: absolute;
+.icon-password {
+  display: none;
+}
+/*Form text*/
+.title {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #666;
+}
+
+/*Inputs box*/
+.form-container {
   overflow: hidden;
+  border-radius: 8px;
+  background-color: #fff;
+  margin: 1rem 0 0.5rem;
+  width: 100%;
+}
+
+.input {
+  background: none;
+  border: 0;
+  outline: 0;
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+  padding: 8px 15px;
+}
+
+.form-section {
+  text-align: center;
+  justify-content: space-around;
+  margin-top: 20px;
+  display: flex;
+}
+
+.form-section a {
+  font-weight: bold;
+  color: #0066ff;
+  transition: color 0.3s ease;
+}
+
+.form-section a:hover {
+  color: #005ce6;
+  text-decoration: underline;
+}
+
+/*Button*/
+
+.btn-12 {
+  background-color: white;
+  color: black;
+  border-radius: 10em;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 1em 2em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid black;
+  box-shadow: 0 0 0 0 black;
+}
+
+.btn-12:hover {
+  transform: translateY(-4px) translateX(-2px);
+  box-shadow: 2px 5px 0 0 black;
+}
+
+.btn-12:active {
+  transform: translateY(2px) translateX(1px);
+  box-shadow: 0 0 0 0 black;
+}
+
+.btn-main-submit {
+  height: 50px;
+  margin: 5px;
+  width: 100%;
+  background: #333;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: Consolas, Courier New, monospace;
+  border: solid #404c5d 1px;
+  font-size: 16px;
+  color: rgb(161, 161, 161);
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  border-radius: 5px;
+  background: linear-gradient(145deg, #2e2d2d, #212121);
+  -webkit-box-shadow: -1px -5px 15px #41465b, 5px 5px 15px #41465b,
+    inset 5px 5px 10px #212121, inset -5px -5px 10px #212121;
+  box-shadow: -1px -5px 15px #41465b, 5px 5px 15px #41465b,
+    inset 5px 5px 10px #212121, inset -5px -5px 10px #212121;
+}
+
+.btn-main-submit:hover {
+  -webkit-box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;
+  box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;
+  color: #d6d6d6;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.btn-main-submit:active {
+  -webkit-box-shadow: 1px 1px 13px #20232e, -1px -1px 33px #545b78;
+  box-shadow: 1px 1px 13px #20232e, -1px -1px 33px #545b78;
+  color: #d6d6d6;
+  -webkit-transition: 100ms;
+  transition: 100ms;
+}
+
+/* btn open modal */
+.button-open-signup {
+  max-width: 184px;
+  max-height: 48px;
 }

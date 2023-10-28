@@ -1,64 +1,49 @@
-<div class="sign-up-block">
-  <button type="button" class="sign-up-btn">
-    <span class="sign-up-btn-text">Sign up</span>
-  </button>
-
-  <button type="button" class="user-btn visually-hidden">
-    <span class="userName">Stephan</span>
-  </button>
-
-  <button type="button" class="sign-out-btn sign-out-des visually-hidden">
-    <span class="sign-up-btn-text">Log out</span>
-  </button>
-</div>
-
-<div class="registration-backdrop is-hidden">
-  <div class="registration-modal">
-    <button class="registration-close-btn" type="button"></button>
-
-    <form class="registration-modal-form">
-      <div class="registration-modal-field">
-        <label for="user-name"></label>
+<div class="form-box" style="display: none">
+  <form class="form">
+    <button class="registration-close-btn">
+      <svg class="registration-close-icon" width="28" height="28">
+        <use href="./public/sprite.svg#close-icon"></use>
+      </svg>
+    </button>
+    <div class="form-container">
+      <div class="register-wraper">
         <input
           type="text"
-          id="user-name"
-          class="registration-modal-input"
-          name="userName"
-          placeholder="Name"
+          class="input-register name-js"
+          placeholder="Full Name"
         />
       </div>
 
-      <div class="registration-modal-field">
-        <label for="user-name"></label>
-        <div class="registration-modal-field-wrapper">
-          <input
-            type="email"
-            id="user-email"
-            class="registration-modal-input"
-            placeholder="Email"
-            name="userEmail"
-          />
-        </div>
-      </div>
+      <div class="register-wraper">
+        <input
+          type="email"
+          class="input-register email-js"
+          placeholder="Email"
+        />
 
-      <div class="registration-modal-field">
-        <label for="user-name"></label>
-        <div class="registration-modal-field-wrapper">
-          <input
-            type="password"
-            id="user-password"
-            class="registration-modal-input"
-            name="userPassword"
-            placeholder="Password"
-          />
-        </div>
+        <svg class="icon-email" width="28" height="28">
+          <use href="./public/sprite.svg#mail-icon"></use>
+        </svg>
       </div>
-      <button class="signup-btn" type="submit">Sign up</button>
-    </form>
-
-    <div class="registration-inner">
-      <button type="button" class="sing-link sing-up-link">Sing up</button>
-      <button type="button" class="sing-link sing-in-link">Sing in</button>
+      <div class="register-wraper">
+        <input
+          type="password"
+          class="input-register password-js"
+          placeholder="Password"
+        />
+        <svg class="icon-password" width="28" height="28">
+          <use href="./public/sprite.svg#lock-icon"></use>
+        </svg>
+      </div>
     </div>
+    <button type="submit" class="btn-main-submit js-submit-up">Sign up</button>
+    <button type="submit" class="btn-main-submit js-submit-in visually-hidden">
+      Sign in
+    </button>
+  </form>
+  <div class="form-section">
+    <button type="button" class="btn-12 btn-up-form js-up">Sign up</button>
+
+    <button type="button" class="btn-12 btn-in-form js-in">Sign in</button>
   </div>
 </div>

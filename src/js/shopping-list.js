@@ -1,5 +1,5 @@
 import './support/support-render';
-import './header'
+import './header';
 export const key = 'booksShopingList';
 const booksArray = [];
 const refs = {
